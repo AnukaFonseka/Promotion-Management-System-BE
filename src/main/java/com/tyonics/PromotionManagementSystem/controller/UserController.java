@@ -19,6 +19,7 @@ public class UserController {
     private UserSevice service;
 
     @PostMapping("/register")
+    @PreAuthorize("hasRole('ADMIN')")
     public Users register(@RequestBody Map<String, Object> userData) {
         Users user = new Users();
         user.setUsername((String) userData.get("username"));
@@ -44,12 +45,14 @@ public class UserController {
 
     // New: Update user
     @PutMapping("/users/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public Users updateUser(@PathVariable int id, @RequestBody Users userDetails) {
         return service.updateUser(id, userDetails);
     }
 
     // New: Delete user
     @DeleteMapping("/users/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> deleteUser(@PathVariable int id) {
         return ResponseEntity.ok(service.deleteUser(id));
     }
