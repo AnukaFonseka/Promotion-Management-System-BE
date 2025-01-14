@@ -86,11 +86,9 @@ This is the backend implementation of the **Promotion Management System**, devel
 ### Promotions
 | Method | Endpoint                | Description                         |
 |--------|-------------------------|-------------------------------------|
-| POST   | `/promotions`           | Create a new promotion              |
 | POST   | `/promotions2`          | Create a new promotion with an image|
 | GET    | `/promotions`           | Get all promotions                  |
 | GET    | `/promotions/{id}`      | Get a promotion by ID               |
-| PUT    | `/promotions/{id}`      | Update an existing promotion        |
 | PUT    | `/promotions2/{id}`     | Update promotion with an image      |
 | DELETE | `/promotions/{id}`      | Delete a promotion                  |
 
