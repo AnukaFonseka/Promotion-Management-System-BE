@@ -27,7 +27,7 @@ This is the backend implementation of the **Promotion Management System**, devel
 ---
 
 ## Technologies Used
-- **Java 11**
+- **Java 21**
 - **Spring Boot**
 - **Spring Data JPA**
 - **Spring Security**
