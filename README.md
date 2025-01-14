@@ -20,7 +20,7 @@ This is the backend implementation of the **Promotion Management System**, devel
 ## Features
 - User authentication with JWT.
 - Role-based access control (Admin and User).
-- Create, update, and delete promotions.
+- Create, update, and delete promotions and users.
 - Image upload and storage for promotions.
 - RESTful APIs following industry best practices.
 
