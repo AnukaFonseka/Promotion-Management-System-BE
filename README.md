@@ -70,13 +70,29 @@ This is the backend implementation of the **Promotion Management System**, devel
 
 ## API Endpoints
 
-| Method | Endpoint                  | Description                         |
-|--------|---------------------------|-------------------------------------|
-| POST   | `/api/promotions2`        | Create a new promotion              |
-| PUT    | `/api/promotions2/{id}`   | Update an existing promotion        |
-| DELETE | `/api/promotions/{id}`    | Delete a promotion                  |
-| GET    | `/api/promotions`         | Get all promotions                  |
-| GET    | `/api/promotions/{id}`    | Get a promotion by ID               |
+### Authentication
+| Method | Endpoint   | Description      |
+|--------|------------|-----------------|
+| POST   | `/register`| Register a user |
+| POST   | `/login`   | Login a user    |
+
+### Users
+| Method | Endpoint     | Description           |
+|--------|--------------|-----------------------|
+| GET    | `/users`     | Get all users         |
+| PUT    | `/users/{id}`| Update a user by ID   |
+| DELETE | `/users/{id}`| Delete a user by ID   |
+
+### Promotions
+| Method | Endpoint                | Description                         |
+|--------|-------------------------|-------------------------------------|
+| POST   | `/promotions`           | Create a new promotion              |
+| POST   | `/promotions2`          | Create a new promotion with an image|
+| GET    | `/promotions`           | Get all promotions                  |
+| GET    | `/promotions/{id}`      | Get a promotion by ID               |
+| PUT    | `/promotions/{id}`      | Update an existing promotion        |
+| PUT    | `/promotions2/{id}`     | Update promotion with an image      |
+| DELETE | `/promotions/{id}`      | Delete a promotion                  |
 
 ---
 
@@ -171,6 +187,3 @@ src
 
 ## License
 This project is for educational purposes and part of an assignment submission. Do not use it for commercial purposes.
-
-
-
