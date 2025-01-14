@@ -47,8 +47,8 @@ This is the backend implementation of the **Promotion Management System**, devel
 ### Steps
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/promotion-management-backend.git
-   cd promotion-management-backend
+   git clone https://github.com/AnukaFonseka/Promotion-Management-System-BE.git
+   cd Promotion-Management-System-BE
    ```
 2. Update `application.properties` with your MySQL configuration:
    ```properties
