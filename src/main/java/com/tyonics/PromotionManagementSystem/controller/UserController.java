@@ -17,7 +17,6 @@ public class UserController {
 
     @Autowired
     private UserSevice service;
-
     @PostMapping("/register")
     @PreAuthorize("hasRole('ADMIN')")
     public Users register(@RequestBody Map<String, Object> userData) {
@@ -30,10 +29,10 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody Users user) {
-        String token = service.verify(user);  // Assuming this method returns the token
+        String token = service.verify(user);
         Map<String, String> response = new HashMap<>();
         response.put("accessToken", token);
-        return ResponseEntity.ok(response);  // Returns a JSON object with the token
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/users")

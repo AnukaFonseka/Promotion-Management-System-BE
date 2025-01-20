@@ -5,7 +5,6 @@ import com.tyonics.PromotionManagementSystem.service.PromotionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,16 +20,13 @@ public class PromotionController {
     @Autowired
     private PromotionService promotionService;
 
-    @Autowired
-    private ResourceLoader resourceLoader;
-
     // Create a new promotion
     @PostMapping("/promotions")
     public Promotion createPromotion(@RequestBody Promotion promotion) {
         return promotionService.createPromotion(promotion);
     }
 
-
+    // Create a new promotion
     @PostMapping("/promotions2")
     public ResponseEntity<Promotion> createPromotion2(@ModelAttribute Promotion promotion, @RequestPart("image")MultipartFile image) {
         try {
@@ -43,6 +39,7 @@ public class PromotionController {
         }
     }
 
+    // Save promotion image
     private String saveImage(MultipartFile image) throws IOException {
         String folderPath = "E:/Learn/Java/PromotionManagementSystem/src/main/resources/static/public";
         File directory = new File(folderPath);
