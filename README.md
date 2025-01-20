@@ -89,7 +89,7 @@ This is the backend implementation of the **Promotion Management System**, devel
 | POST   | `/promotions2`          | Create a new promotion with an image|
 | GET    | `/promotions`           | Get all promotions                  |
 | GET    | `/promotions/{id}`      | Get a promotion by ID               |
-| PUT    | `/promotions2/{id}`     | Update promotion with an image      |
+| PUT    | `/promotions/{id}`     | Update promotion with an image      |
 | DELETE | `/promotions/{id}`      | Delete a promotion                  |
 
 ---
